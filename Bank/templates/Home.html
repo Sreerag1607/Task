@@ -1,0 +1,49 @@
+{% load static %}
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row pt-4">
+            <center><p style="font-family: Georgia, serif; font-size: 40px;">XYZ BANK</p></center>
+        </div>
+    </div>
+        <ul>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+          <li class="dropdown ">
+            <a href="#">Branches</a>
+                <div class="dropdown-content">
+                  <a href="https://en.wikipedia.org/wiki/Kozhikode">Kozhikode</a>
+                  <a href="https://en.wikipedia.org/wiki/Kannur">Kannur</a>
+                  <a href="https://en.wikipedia.org/wiki/Kottayam">Kottayam</a>
+                  <a href="https://en.wikipedia.org/wiki/Thrissur">Thrissur</a>
+                  <a href="https://en.wikipedia.org/wiki/Idukki_district">Idukki</a>
+                </div>
+          </li>
+        </ul>
+    <div class="container-fluid">
+        <img src="{% static 'img/banner.png' %}" alt="banner" height="500px" width="1497px">
+    </div>
+    <div class="container pt-4">
+        <p>
+            A bank is a cornerstone of the modern financial system, serving as a pivotal institution that provides a wide array of financial services to individuals, businesses, and governments. At its core, a bank is a financial intermediary, connecting those with surplus funds to those in need of capital. One of its primary functions is to accept and safeguard deposits, offering various types of accounts to cater to diverse financial needs. This secure storage of funds allows individuals and entities to transact and manage their money efficiently.
+
+        In addition to deposit services, banks are vital in extending credit and loans, thereby fueling economic growth and development. They facilitate the acquisition of homes, the establishment of businesses, and the execution of various projects by lending funds and charging interest. Banks also play an integral role in payment processing, enabling the seamless transfer of money through electronic transfers, checks, and credit cards.
+
+        Furthermore, banks often offer investment services, aiding customers in wealth management and capital growth. They provide access to a broad spectrum of financial products, including mutual funds, brokerage services, and advisory expertise. Lastly, while distinct from commercial banks, central banks possess the unique power to issue a nation's currency, ensuring the stability of the monetary system. Overall, banks are indispensable pillars of the global economy, underpinning financial stability and facilitating economic prosperity.
+        </p>
+    </div><br>
+    <center>
+      <a href="/login">Login</a>
+    </center><br><br>
+    <div class="container-fluid" style="background-color:#FFFFFF;">
+        <center><p>@copyright;  XYZ Bank Pvt Ltd | All Rights Reserved</p></center>
+    </div>
+</body>
+</html>

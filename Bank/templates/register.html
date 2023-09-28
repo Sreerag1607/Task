@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .registration-container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #E3E6E3;
+        }
+
+        .registration-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .registration-container input[type="text"],
+        .registration-container input[type="password"],
+        .registration-container input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .registration-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .registration-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="registration-container">
+    <h2 align="center">Registration</h2>
+    <div class="row ">
+        <div>
+            <form action="register" method="post">
+                {% csrf_token %}
+                <div>
+                    <input type="text" name="username" placeholder="Enter The Username" required>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Enter Your Password" required>
+                </div>
+                <div>
+                    <input type="password" name="cnfpassword" placeholder="Confirm The Password" required>
+                </div>
+                <div>
+                    <input type="submit" value="SUBMIT">
+                </div>
+            </form><br><br>
+            {% for msg in messages %}
+                {{msg}}
+            {% endfor %}
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
